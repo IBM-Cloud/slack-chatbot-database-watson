@@ -3,9 +3,67 @@
   "created": "2018-01-31T12:51:00.745Z",
   "intents": [
     {
+      "intent": "exitprocess",
+      "created": "2018-02-02T14:37:41.555Z",
+      "updated": "2018-02-02T14:39:03.649Z",
+      "examples": [
+        {
+          "text": "Forget it, I changed my mind",
+          "created": "2018-02-02T14:37:55.814Z",
+          "updated": "2018-02-02T14:37:55.814Z"
+        },
+        {
+          "text": "cancel",
+          "created": "2018-02-02T14:38:00.727Z",
+          "updated": "2018-02-02T14:38:00.727Z"
+        },
+        {
+          "text": "exit",
+          "created": "2018-02-02T14:38:05.552Z",
+          "updated": "2018-02-02T14:38:05.552Z"
+        },
+        {
+          "text": "back to home",
+          "created": "2018-02-02T14:38:11.297Z",
+          "updated": "2018-02-02T14:38:11.297Z"
+        },
+        {
+          "text": "no need anymore, cancel",
+          "created": "2018-02-02T14:38:27.686Z",
+          "updated": "2018-02-02T14:38:27.686Z"
+        },
+        {
+          "text": "I want to search instead",
+          "created": "2018-02-02T14:38:38.153Z",
+          "updated": "2018-02-02T14:38:38.153Z"
+        },
+        {
+          "text": "back",
+          "created": "2018-02-02T14:38:47.266Z",
+          "updated": "2018-02-02T14:38:47.266Z"
+        },
+        {
+          "text": "I want to leave",
+          "created": "2018-02-02T14:38:54.866Z",
+          "updated": "2018-02-02T14:38:54.866Z"
+        },
+        {
+          "text": "bye",
+          "created": "2018-02-02T14:38:59.404Z",
+          "updated": "2018-02-02T14:38:59.404Z"
+        },
+        {
+          "text": "done",
+          "created": "2018-02-02T14:39:03.649Z",
+          "updated": "2018-02-02T14:39:03.649Z"
+        }
+      ],
+      "description": "exit the current node"
+    },
+    {
       "intent": "showConference",
       "created": "2018-01-31T13:26:16.035Z",
-      "updated": "2018-01-31T13:45:18.122Z",
+      "updated": "2018-02-02T15:49:03.138Z",
       "examples": [
         {
           "text": "do you have information on an upcoming event",
@@ -66,6 +124,16 @@
           "text": "where is the event",
           "created": "2018-01-31T13:45:18.122Z",
           "updated": "2018-01-31T13:45:18.122Z"
+        },
+        {
+          "text": "search for conference",
+          "created": "2018-02-02T15:49:00.008Z",
+          "updated": "2018-02-02T15:49:00.008Z"
+        },
+        {
+          "text": "search",
+          "created": "2018-02-02T15:49:03.138Z",
+          "updated": "2018-02-02T15:49:03.138Z"
         }
       ],
       "description": "show event information"
@@ -185,7 +253,7 @@
       "description": null
     }
   ],
-  "updated": "2018-02-02T10:19:19.621Z",
+  "updated": "2018-02-02T15:49:03.138Z",
   "entities": [
     {
       "entity": "queryPredicate",
@@ -253,15 +321,15 @@
           "type": "patterns",
           "value": "shortname",
           "created": "2018-01-31T13:28:56.245Z",
-          "updated": "2018-02-02T10:19:19.621Z",
+          "updated": "2018-02-02T15:44:38.371Z",
           "metadata": null,
           "patterns": [
-            "\"[A-Za-z0-9.:| @]+\""
+            "\"[A-Za-z0-9.:| @\\']+\""
           ]
         }
       ],
       "created": "2018-01-31T13:28:56.245Z",
-      "updated": "2018-02-02T10:19:19.621Z",
+      "updated": "2018-02-02T15:44:38.371Z",
       "metadata": null,
       "description": null
     },
@@ -618,6 +686,23 @@
       "previous_sibling": "slot_42_1517317182143"
     },
     {
+      "type": "standard",
+      "title": "clear context",
+      "output": {
+        "deleted": "<? context.remove('location') ?><? context.remove('eventDate') ?><? context.remove('eventContact') ?> <? context.remove('startTime') ?><? context.remove('eventName') ?> <? context.remove('endTime') ?> <? context.remove('eventEndDate') ?>"
+      },
+      "parent": "node_1_1517301749575",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-02-01T13:09:43.217Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "node_15_1517305164268",
+      "previous_sibling": "handler_2_1517582351537"
+    },
+    {
       "type": "slot",
       "title": null,
       "output": {},
@@ -659,20 +744,25 @@
       "previous_sibling": "node_15_1517305164268"
     },
     {
-      "type": "standard",
-      "title": "clear context",
+      "type": "event_handler",
+      "title": null,
       "output": {
-        "deleted": "<? context.remove('location') ?><? context.remove('eventDate') ?><? context.remove('eventContact') ?> <? context.remove('startTime') ?><? context.remove('eventName') ?> <? context.remove('endTime') ?> <? context.remove('eventEndDate') ?>"
+        "text": {
+          "values": []
+        }
       },
       "parent": "node_1_1517301749575",
       "context": null,
-      "created": "2018-01-31T12:51:00.745Z",
-      "updated": "2018-02-01T13:09:43.217Z",
-      "metadata": {},
-      "next_step": null,
-      "conditions": "anything_else",
+      "created": "2018-02-02T14:39:46.770Z",
+      "updated": "2018-02-02T14:39:46.770Z",
+      "metadata": null,
+      "next_step": {
+        "behavior": "skip_all_slots"
+      },
+      "conditions": "#exitprocess",
+      "event_name": "generic",
       "description": null,
-      "dialog_node": "node_15_1517305164268",
+      "dialog_node": "handler_2_1517582351537",
       "previous_sibling": null
     },
     {
@@ -1249,8 +1339,8 @@
       "output": {
         "text": {
           "values": [
-            "Great. I have the following:\nThe event <? $eventName ?> is at or in <? $location ?>. It starts on <? $eventDate ?> at <? $startTime ?> and ends on <? $eventEndDate ?> on <? $endTime ?>. Info is available from <? $eventContact ?>.",
-            "Ok, I got the new event named <? $eventName ?> at <? $location ?> from <? $eventDate ?>(<? $startTime ?>) to <? $eventEndDate ?>(<? $endTime ?>). I noted down <? $eventContact ?> as contact information."
+            "<? context.endTime? 'Great. I have the following:\nThe event '+context.eventName+'  is at or in '+context.location+'. It starts on '+context.eventDate+' at '+context.startTime+' and ends on '+context.eventEndDate+ ' on '+context.endTime+'. Info is available from '+context.eventContact+'.' : 'Ok, exiting' ?>",
+            "<? context.endTime? 'Ok, I got the new event named '+context.eventName +' at '+context.location+ ' from '+context.eventDate+ '('+context.startTime +') to '+ context.eventEndDate+ '(<'+context.endTime+ '). I noted down '+context.eventContact+ ' as contact information.' :'Ok, cancelled' ?>"
           ],
           "selection_policy": "sequential"
         }
@@ -1277,7 +1367,7 @@
       ],
       "context": null,
       "created": "2018-01-31T12:51:00.745Z",
-      "updated": "2018-02-01T15:29:06.472Z",
+      "updated": "2018-02-02T15:40:27.514Z",
       "metadata": {
         "fallback": "leave"
       },
