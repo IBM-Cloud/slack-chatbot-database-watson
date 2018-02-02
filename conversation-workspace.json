@@ -1,0 +1,1347 @@
+{
+  "name": "SlackBot",
+  "created": "2018-01-31T12:51:00.745Z",
+  "intents": [
+    {
+      "intent": "showConference",
+      "created": "2018-01-31T13:26:16.035Z",
+      "updated": "2018-01-31T13:45:18.122Z",
+      "examples": [
+        {
+          "text": "do you have information on an upcoming event",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "tell me about the event on Monday",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "what is the meeting information",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "show event data",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "conference data",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "give me information on conference",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "what is the information for conference",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "show conference",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "show event information",
+          "created": "2018-01-31T13:44:11.539Z",
+          "updated": "2018-01-31T13:44:11.539Z"
+        },
+        {
+          "text": "query the event data",
+          "created": "2018-01-31T13:44:31.416Z",
+          "updated": "2018-01-31T13:44:31.416Z"
+        },
+        {
+          "text": "When is the meeting",
+          "created": "2018-01-31T13:45:09.740Z",
+          "updated": "2018-01-31T13:45:09.740Z"
+        },
+        {
+          "text": "where is the event",
+          "created": "2018-01-31T13:45:18.122Z",
+          "updated": "2018-01-31T13:45:18.122Z"
+        }
+      ],
+      "description": "show event information"
+    },
+    {
+      "intent": "help",
+      "created": "2018-01-31T13:26:16.035Z",
+      "updated": "2018-01-31T13:26:16.035Z",
+      "examples": [
+        {
+          "text": "Are you able to help me?",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "I'm not sure what to ask",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "I need some help",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "What can you do?",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "What service do you offer?",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "newEvent",
+      "created": "2018-01-31T13:26:16.035Z",
+      "updated": "2018-01-31T13:26:16.035Z",
+      "examples": [
+        {
+          "text": "Some meeting information",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "news about a conference",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "Here is some event data",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "I have a new event",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "I want to create an event",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "how is the forecast",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        }
+      ],
+      "description": "ask for event data"
+    },
+    {
+      "intent": "thanks",
+      "created": "2018-01-31T13:26:16.035Z",
+      "updated": "2018-01-31T13:26:16.035Z",
+      "examples": [
+        {
+          "text": "Cheers",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "Cheers watson",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "Nice one",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "Ta",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "Thanks",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "Thanks watson",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        },
+        {
+          "text": "Thank you",
+          "created": "2018-01-31T13:26:16.035Z",
+          "updated": "2018-01-31T13:26:16.035Z"
+        }
+      ],
+      "description": null
+    }
+  ],
+  "updated": "2018-02-02T10:19:19.621Z",
+  "entities": [
+    {
+      "entity": "queryPredicate",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "date",
+          "created": "2018-01-31T13:30:51.696Z",
+          "updated": "2018-01-31T13:30:51.696Z",
+          "metadata": null,
+          "synonyms": [
+            "duration",
+            "month",
+            "day",
+            "time"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "identifier",
+          "created": "2018-01-31T13:30:13.814Z",
+          "updated": "2018-01-31T13:30:13.814Z",
+          "metadata": null,
+          "synonyms": [
+            "id",
+            "name",
+            "shortname",
+            "title"
+          ]
+        }
+      ],
+      "created": "2018-01-31T13:28:56.245Z",
+      "updated": "2018-01-31T13:30:51.696Z",
+      "metadata": null,
+      "description": null
+    },
+    {
+      "entity": "sys-location",
+      "values": [],
+      "created": "2018-01-31T13:28:56.245Z",
+      "updated": "2018-01-31T13:28:56.245Z",
+      "metadata": null,
+      "description": null
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "created": "2018-01-31T13:28:56.245Z",
+      "updated": "2018-01-31T13:28:56.245Z",
+      "metadata": null,
+      "description": null
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "created": "2018-01-31T13:28:56.245Z",
+      "updated": "2018-01-31T13:28:56.245Z",
+      "metadata": null,
+      "description": null
+    },
+    {
+      "entity": "eventName",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "shortname",
+          "created": "2018-01-31T13:28:56.245Z",
+          "updated": "2018-02-02T10:19:19.621Z",
+          "metadata": null,
+          "patterns": [
+            "\"[A-Za-z0-9.:| @]+\""
+          ]
+        }
+      ],
+      "created": "2018-01-31T13:28:56.245Z",
+      "updated": "2018-02-02T10:19:19.621Z",
+      "metadata": null,
+      "description": null
+    },
+    {
+      "entity": "eventContact",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "websiteURI",
+          "created": "2018-01-31T13:28:56.245Z",
+          "updated": "2018-01-31T13:28:56.245Z",
+          "metadata": null,
+          "patterns": [
+            "(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "email",
+          "created": "2018-01-31T13:28:56.245Z",
+          "updated": "2018-01-31T13:28:56.245Z",
+          "metadata": null,
+          "patterns": [
+            "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "slackProvidedURI",
+          "created": "2018-01-31T13:28:56.245Z",
+          "updated": "2018-01-31T13:28:56.245Z",
+          "metadata": null,
+          "patterns": [
+            "<[A-Za-z0-9._|:%@\\/]+>"
+          ]
+        }
+      ],
+      "created": "2018-01-31T13:28:56.245Z",
+      "updated": "2018-01-31T13:28:56.245Z",
+      "metadata": null,
+      "description": null
+    }
+  ],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2017-05-26"
+    },
+    "runtime_version": null
+  },
+  "description": "A slackbot",
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {},
+      "parent": "slot_9_1517304032949",
+      "context": {
+        "eventContact": "@eventContact.literal"
+      },
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "@eventContact.literal",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_10_1517304032949",
+      "previous_sibling": "handler_11_1517304032949"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "Do you have an email contact or web URI?"
+      },
+      "parent": "slot_9_1517304032949",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_11_1517304032949",
+      "previous_sibling": null
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {},
+      "parent": "slot_3_1517301789523",
+      "context": {
+        "location": "@sys-location"
+      },
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "@sys-location",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_4_1517301789523",
+      "previous_sibling": "handler_5_1517301789523"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "At which location (city)?"
+      },
+      "parent": "slot_3_1517301789523",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_5_1517301789523",
+      "previous_sibling": null
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {},
+      "parent": "node_1_1516878960414",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "metadata": {},
+      "variable": "$eventName",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_46_1517321324912",
+      "previous_sibling": "handler_45_1517321324900"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": {
+          "values": [
+            "What is the short name of that conference or event?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1516878960414",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "disabled": true,
+      "metadata": {},
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_45_1517321324900",
+      "previous_sibling": "node_3_1516880577327"
+    },
+    {
+      "type": "response_condition",
+      "title": null,
+      "output": {
+        "text": {
+          "values": []
+        }
+      },
+      "parent": "node_1_1516878960414",
+      "actions": [
+        {
+          "name": "_/slackdemo/fetchEventByShortname",
+          "type": "server",
+          "parameters": {
+            "eventname": [
+              "<? $eventName.substring(1,$eventName.length()-1) ?>"
+            ]
+          },
+          "credentials": "$private.icfcreds",
+          "result_variable": "events"
+        }
+      ],
+      "context": {
+        "private": {}
+      },
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-02-01T15:17:26.192Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "node_3_1516880577327",
+      "previous_sibling": "node_53_1517321719140"
+    },
+    {
+      "type": "standard",
+      "title": "Respond and clear input data",
+      "output": {
+        "text": {
+          "values": [
+            "ok. Here is what I got:\n ```<? $events['result'] ?>```",
+            "Data:\n ``` <? $events['data'] ?> ```"
+          ],
+          "selection_policy": "sequential"
+        },
+        "deleted": "<? context.remove('eventName') ?> <? context.remove('queryPredicate') ?>"
+      },
+      "parent": "node_1_1516878960414",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-02-01T16:19:40.862Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "node_53_1517321719140",
+      "previous_sibling": null
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "At what date does it end?"
+      },
+      "parent": "slot_4_1517489958701",
+      "context": null,
+      "created": "2018-02-01T12:59:20.044Z",
+      "updated": "2018-02-01T12:59:58.443Z",
+      "metadata": null,
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_6_1517489958701",
+      "previous_sibling": "handler_5_1517489958701"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": null,
+      "parent": "slot_4_1517489958701",
+      "context": {
+        "eventEndDate": "@sys-date"
+      },
+      "created": "2018-02-01T12:59:19.661Z",
+      "updated": "2018-02-01T12:59:39.454Z",
+      "metadata": null,
+      "next_step": null,
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_5_1517489958701",
+      "previous_sibling": null
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {},
+      "parent": "node_1_1517301749575",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "metadata": {},
+      "variable": "$eventDate",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_6_1517301823167",
+      "previous_sibling": "slot_9_1517304032949"
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {},
+      "parent": "node_1_1517301749575",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "metadata": {},
+      "variable": "$eventContact",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_9_1517304032949",
+      "previous_sibling": "slot_3_1517301789523"
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {},
+      "parent": "node_1_1517301749575",
+      "context": null,
+      "created": "2018-02-01T12:59:27.833Z",
+      "updated": "2018-02-01T13:10:05.415Z",
+      "metadata": {},
+      "variable": "$endTime",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_7_1517489967615",
+      "previous_sibling": "slot_4_1517489958701"
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {},
+      "parent": "node_1_1517301749575",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-02-01T13:00:18.501Z",
+      "metadata": {},
+      "variable": "$location",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_3_1517301789523",
+      "previous_sibling": "slot_2_1517392218999"
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {},
+      "parent": "node_1_1517301749575",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-02-01T13:32:28.443Z",
+      "metadata": {},
+      "variable": "$startTime",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_42_1517317182143",
+      "previous_sibling": "slot_6_1517301823167"
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {},
+      "parent": "node_1_1517301749575",
+      "context": null,
+      "created": "2018-02-01T12:59:19.340Z",
+      "updated": "2018-02-01T12:59:39.120Z",
+      "metadata": {},
+      "variable": "$eventEndDate",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_4_1517489958701",
+      "previous_sibling": "slot_42_1517317182143"
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {},
+      "parent": "node_1_1517301749575",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "metadata": {},
+      "variable": "$eventName",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_2_1517392218999",
+      "previous_sibling": "handler_2_1517301789512"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": {
+          "values": [
+            "Tell me about the start date and in which city it is. Do you have a URI for that event?",
+            "For which city? And on what date does it start?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1517301749575",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "disabled": true,
+      "metadata": {},
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_2_1517301789512",
+      "previous_sibling": "node_15_1517305164268"
+    },
+    {
+      "type": "standard",
+      "title": "clear context",
+      "output": {
+        "deleted": "<? context.remove('location') ?><? context.remove('eventDate') ?><? context.remove('eventContact') ?> <? context.remove('startTime') ?><? context.remove('eventName') ?> <? context.remove('endTime') ?> <? context.remove('eventEndDate') ?>"
+      },
+      "parent": "node_1_1517301749575",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-02-01T13:09:43.217Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "node_15_1517305164268",
+      "previous_sibling": null
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "How should I name it? (use quotes)"
+      },
+      "parent": "slot_2_1517392218999",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T13:23:29.610Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_4_1517392218999",
+      "previous_sibling": "handler_3_1517392218999"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {},
+      "parent": "slot_2_1517392218999",
+      "context": {
+        "eventName": "@eventName.literal"
+      },
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "@eventName.literal",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_3_1517392218999",
+      "previous_sibling": null
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {},
+      "parent": "slot_6_1517301823167",
+      "context": {
+        "eventDate": "@sys-date"
+      },
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_7_1517301823167",
+      "previous_sibling": "handler_8_1517301823167"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "At which date is it or does it start?"
+      },
+      "parent": "slot_6_1517301823167",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_8_1517301823167",
+      "previous_sibling": null
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {},
+      "parent": "slot_46_1517321324912",
+      "context": {
+        "eventName": "@eventName.literal"
+      },
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "@eventName.literal",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_47_1517321324912",
+      "previous_sibling": "handler_48_1517321324912"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "What is the shortname? (use quotes)"
+      },
+      "parent": "slot_46_1517321324912",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T13:23:18.139Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_48_1517321324912",
+      "previous_sibling": null
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "When does it start? (time)"
+      },
+      "parent": "slot_42_1517317182143",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-02-01T11:06:45.712Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_44_1517317182143",
+      "previous_sibling": "handler_43_1517317182143"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {},
+      "parent": "slot_42_1517317182143",
+      "context": {
+        "startTime": "@sys-time"
+      },
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-02-01T13:09:55.701Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "@sys-time",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_43_1517317182143",
+      "previous_sibling": null
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "Do you want to search by identifier or date?"
+      },
+      "parent": "slot_20_1517405919423",
+      "context": null,
+      "created": "2018-01-31T13:38:40.765Z",
+      "updated": "2018-01-31T13:41:12.493Z",
+      "metadata": null,
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_22_1517405919423",
+      "previous_sibling": "handler_21_1517405919423"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": null,
+      "parent": "slot_20_1517405919423",
+      "context": {
+        "queryPredicate": "@queryPredicate"
+      },
+      "created": "2018-01-31T13:38:40.449Z",
+      "updated": "2018-01-31T13:40:54.131Z",
+      "metadata": null,
+      "next_step": null,
+      "conditions": "@queryPredicate",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_21_1517405919423",
+      "previous_sibling": null
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "When is the start date of the event you are searching?"
+      },
+      "parent": "slot_23_1517406154633",
+      "context": null,
+      "created": "2018-01-31T13:42:35.529Z",
+      "updated": "2018-01-31T14:28:27.196Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_25_1517406154633",
+      "previous_sibling": "handler_24_1517406154633"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {},
+      "parent": "slot_23_1517406154633",
+      "context": {
+        "eventDateBegin": "@sys-date"
+      },
+      "created": "2018-01-31T13:42:35.184Z",
+      "updated": "2018-01-31T14:28:48.235Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_24_1517406154633",
+      "previous_sibling": null
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "When is the end?"
+      },
+      "parent": "slot_27_1517408909920",
+      "context": null,
+      "created": "2018-01-31T14:28:31.176Z",
+      "updated": "2018-01-31T14:29:00.363Z",
+      "metadata": null,
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_29_1517408909920",
+      "previous_sibling": "handler_28_1517408909920"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": null,
+      "parent": "slot_27_1517408909920",
+      "context": {
+        "date": "@sys-date",
+        "eventDateEnd": "@sys-date"
+      },
+      "created": "2018-01-31T14:28:30.826Z",
+      "updated": "2018-01-31T14:28:44.834Z",
+      "metadata": null,
+      "next_step": null,
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_28_1517408909920",
+      "previous_sibling": null
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {},
+      "parent": "node_9_1517403528441",
+      "context": null,
+      "created": "2018-01-31T14:28:30.152Z",
+      "updated": "2018-01-31T14:28:44.480Z",
+      "metadata": {},
+      "variable": "$eventDateEnd",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_27_1517408909920",
+      "previous_sibling": "node_15_1517403528453"
+    },
+    {
+      "type": "standard",
+      "title": "Respond and clear input data",
+      "output": {
+        "text": {
+          "values": [
+            "ok. Here is what I got:\n ```<? $events['result'] ?>```",
+            "Data:\n ``` <? $events['data'] ?> ```"
+          ],
+          "selection_policy": "sequential"
+        },
+        "deleted": "<? context.remove('eventDateBegin') ?><? context.remove('eventDateEnd') ?> <? context.remove('queryPredicate') ?>"
+      },
+      "parent": "node_9_1517403528441",
+      "context": null,
+      "created": "2018-01-31T12:58:49.312Z",
+      "updated": "2018-02-01T16:19:59.285Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "node_10_1517403528453",
+      "previous_sibling": "slot_23_1517406154633"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": {
+          "values": [
+            "What is the short name of that conference or event?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1517403528441",
+      "context": null,
+      "created": "2018-01-31T12:58:49.312Z",
+      "updated": "2018-01-31T12:58:49.312Z",
+      "disabled": true,
+      "metadata": {},
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_14_1517403528453",
+      "previous_sibling": "slot_27_1517408909920"
+    },
+    {
+      "type": "response_condition",
+      "title": null,
+      "output": {
+        "text": {
+          "values": []
+        }
+      },
+      "parent": "node_9_1517403528441",
+      "actions": [
+        {
+          "name": "_/slackdemo/fetchEventByDates",
+          "type": "server",
+          "parameters": {
+            "eventdates": [
+              "<? $eventDateBegin ?>",
+              "<? $eventDateEnd ?>"
+            ]
+          },
+          "credentials": "$private.icfcreds",
+          "result_variable": "events"
+        }
+      ],
+      "context": {},
+      "created": "2018-01-31T12:58:49.312Z",
+      "updated": "2018-02-01T14:21:33.848Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "node_15_1517403528453",
+      "previous_sibling": "node_10_1517403528453"
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {},
+      "parent": "node_9_1517403528441",
+      "context": null,
+      "created": "2018-01-31T13:42:34.856Z",
+      "updated": "2018-01-31T14:28:47.883Z",
+      "metadata": {},
+      "variable": "$eventDateBegin",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_23_1517406154633",
+      "previous_sibling": null
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "And at what time does it end?"
+      },
+      "parent": "slot_7_1517489967615",
+      "context": null,
+      "created": "2018-02-01T12:59:28.479Z",
+      "updated": "2018-02-01T13:00:11.762Z",
+      "metadata": null,
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_9_1517489967615",
+      "previous_sibling": "handler_8_1517489967615"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {},
+      "parent": "slot_7_1517489967615",
+      "context": {
+        "endTime": "@sys-time"
+      },
+      "created": "2018-02-01T12:59:28.167Z",
+      "updated": "2018-02-01T13:10:05.764Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "@sys-time",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_8_1517489967615",
+      "previous_sibling": null
+    },
+    {
+      "type": "frame",
+      "title": "query event by dates",
+      "output": {},
+      "parent": "node_16_1517405116504",
+      "context": null,
+      "created": "2018-01-31T12:58:49.312Z",
+      "updated": "2018-01-31T14:28:01.462Z",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1517403528453"
+      },
+      "conditions": "$queryPredicate:date",
+      "description": null,
+      "dialog_node": "node_9_1517403528441",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1516878960414",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "frame",
+      "title": "query events by shortname",
+      "output": {},
+      "parent": "node_16_1517405116504",
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T13:58:01.219Z",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_53_1517321719140"
+      },
+      "conditions": "$queryPredicate:identifier",
+      "description": null,
+      "dialog_node": "node_1_1516878960414",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_26_1517406476671",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {},
+      "parent": "node_16_1517405116504",
+      "context": null,
+      "created": "2018-01-31T13:38:39.898Z",
+      "updated": "2018-01-31T13:53:06.441Z",
+      "disabled": true,
+      "metadata": {},
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_19_1517405919417",
+      "previous_sibling": "slot_20_1517405919423"
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {},
+      "parent": "node_16_1517405116504",
+      "context": null,
+      "created": "2018-01-31T13:38:40.114Z",
+      "updated": "2018-01-31T13:40:53.818Z",
+      "metadata": {},
+      "variable": "$queryPredicate",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_20_1517405919423",
+      "previous_sibling": "node_9_1517403528441"
+    },
+    {
+      "type": "response_condition",
+      "title": null,
+      "output": {
+        "text": {
+          "values": [
+            "Ok, checking the event information"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_16_1517405116504",
+      "context": null,
+      "created": "2018-01-31T13:47:56.900Z",
+      "updated": "2018-01-31T13:53:07.106Z",
+      "disabled": true,
+      "metadata": {},
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "node_26_1517406476671",
+      "previous_sibling": null
+    },
+    {
+      "type": "frame",
+      "title": "query events",
+      "output": {
+        "text": {
+          "values": [
+            "Ok, checking the event information."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": null,
+      "context": null,
+      "created": "2018-01-31T13:25:17.073Z",
+      "updated": "2018-01-31T16:44:18.357Z",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#showConference",
+      "digress_in": "does_not_return",
+      "description": null,
+      "dialog_node": "node_16_1517405116504",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1517301749575",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "standard",
+      "title": "Thanks",
+      "output": {
+        "text": {
+          "values": [
+            "No problem!",
+            "No worries!",
+            "You're welcome!",
+            "That's perfectly alright!",
+            "Any time"
+          ],
+          "selection_policy": "random"
+        }
+      },
+      "parent": null,
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "#thanks",
+      "description": null,
+      "dialog_node": "Thanks",
+      "previous_sibling": "Help"
+    },
+    {
+      "type": "frame",
+      "title": "newEvent",
+      "output": {
+        "text": {
+          "values": [
+            "Great. I have the following:\nThe event <? $eventName ?> is at or in <? $location ?>. It starts on <? $eventDate ?> at <? $startTime ?> and ends on <? $eventEndDate ?> on <? $endTime ?>. Info is available from <? $eventContact ?>.",
+            "Ok, I got the new event named <? $eventName ?> at <? $location ?> from <? $eventDate ?>(<? $startTime ?>) to <? $eventEndDate ?>(<? $endTime ?>). I noted down <? $eventContact ?> as contact information."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": null,
+      "actions": [
+        {
+          "name": "_/slackdemo/eventInsert",
+          "type": "server",
+          "parameters": {
+            "eventValues": [
+              "<? $eventName.substring(1,$eventName.length()-1) ?>",
+              "<? $location ?>",
+              "<? $eventDate ?>",
+              "<? $startTime ?>",
+              "<? $eventEndDate ?>",
+              "<? $endTime ?>",
+              "<? $eventContact ?>"
+            ]
+          },
+          "credentials": "$private.icfcreds",
+          "result_variable": "inserted"
+        }
+      ],
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-02-01T15:29:06.472Z",
+      "metadata": {
+        "fallback": "leave"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_15_1517305164268"
+      },
+      "conditions": "#newEvent",
+      "digress_in": "does_not_return",
+      "description": null,
+      "dialog_node": "node_1_1517301749575",
+      "digress_out": "allow_all",
+      "previous_sibling": "Thanks",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "text": {
+          "values": [
+            "Sorry I didn't quite get that",
+            "would you repeat that for me please"
+          ],
+          "selection_policy": "random"
+        }
+      },
+      "parent": null,
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:51:00.745Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_16_1517405116504"
+    },
+    {
+      "type": "standard",
+      "title": "Help",
+      "output": {
+        "text": {
+          "values": [
+            "I can show you event information or gather new event or meeting data.",
+            "Hey, say something like \"show event information\" to find data about a meeting or conference. Or use \"new event\" or \"new conference\" to gather data for a new database entry."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": null,
+      "context": null,
+      "created": "2018-01-31T12:51:00.745Z",
+      "updated": "2018-01-31T12:54:47.987Z",
+      "metadata": {},
+      "next_step": null,
+      "conditions": "#help",
+      "description": null,
+      "dialog_node": "Help",
+      "previous_sibling": null
+    }
+  ],
+  "workspace_id": "62ea537f-b1ab-48ed-bb51-12666364e4c4",
+  "counterexamples": [],
+  "learning_opt_out": false
+}
