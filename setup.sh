@@ -4,7 +4,7 @@
 # Written by Henrik Loeser
 
 # create Db2 Warehouse service and service credentials
-# bx service create dashDB entry eventDB
+# bx service create dashDB Entry eventDB
 # bx service key-create dashDB-p slackbotkey
 
 # create IBM Watson Conversation service
