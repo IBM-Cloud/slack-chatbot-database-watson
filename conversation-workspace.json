@@ -253,8 +253,16 @@
       "description": null
     }
   ],
-  "updated": "2018-02-02T15:49:03.138Z",
+  "updated": "2018-02-07T09:08:31.651Z",
   "entities": [
+    {
+      "entity": "sys-date",
+      "values": [],
+      "created": "2018-01-31T13:28:56.245Z",
+      "updated": "2018-01-31T13:28:56.245Z",
+      "metadata": null,
+      "description": null
+    },
     {
       "entity": "queryPredicate",
       "values": [
@@ -299,37 +307,29 @@
       "description": null
     },
     {
-      "entity": "sys-time",
-      "values": [],
-      "created": "2018-01-31T13:28:56.245Z",
-      "updated": "2018-01-31T13:28:56.245Z",
-      "metadata": null,
-      "description": null
-    },
-    {
-      "entity": "sys-date",
-      "values": [],
-      "created": "2018-01-31T13:28:56.245Z",
-      "updated": "2018-01-31T13:28:56.245Z",
-      "metadata": null,
-      "description": null
-    },
-    {
       "entity": "eventName",
       "values": [
         {
           "type": "patterns",
           "value": "shortname",
           "created": "2018-01-31T13:28:56.245Z",
-          "updated": "2018-02-02T15:44:38.371Z",
+          "updated": "2018-02-07T09:08:31.651Z",
           "metadata": null,
           "patterns": [
-            "\"[A-Za-z0-9.:| @\\']+\""
+            "[\"„“][A-Za-z0-9.:| @\\']+[\"”“]"
           ]
         }
       ],
       "created": "2018-01-31T13:28:56.245Z",
-      "updated": "2018-02-02T15:44:38.371Z",
+      "updated": "2018-02-07T09:08:31.651Z",
+      "metadata": null,
+      "description": null
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "created": "2018-01-31T13:28:56.245Z",
+      "updated": "2018-01-31T13:28:56.245Z",
       "metadata": null,
       "description": null
     },
@@ -1367,7 +1367,7 @@
       ],
       "context": null,
       "created": "2018-01-31T12:51:00.745Z",
-      "updated": "2018-02-02T15:40:27.514Z",
+      "updated": "2018-02-02T17:36:32.505Z",
       "metadata": {
         "fallback": "leave"
       },
