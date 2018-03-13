@@ -5,7 +5,7 @@
 
 # create Db2 Warehouse service and service credentials
 # bx service create dashDB Entry eventDB
-# bx service key-create dashDB-p slackbotkey
+# bx service key-create eventDB slackbotkey
 
 # create IBM Watson Conversation service
 # bx service create conversation free eventConversation
