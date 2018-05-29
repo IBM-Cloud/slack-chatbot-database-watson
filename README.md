@@ -1,13 +1,13 @@
-# Build a database-driven Slackbot with IBM Watson™ Conversation
-Code to build a Slackbot to create and search Db2 database entries for events and conferences. The Slackbot is backed by the IBM Watson Conversation service. We integrate Slack and Conversation using the Conversation connector in a serverless way. 
+# Build a database-driven Slackbot with IBM Watson™ Assistant (Conversation)
+Code to build a Slackbot to create and search Db2 database entries for events and conferences. The Slackbot is backed by the IBM Watson Assistant (Conversation) service. We integrate Slack and Assistant using the Conversation connector in a serverless way. 
 
 The tutorial with detailed step-by-step instructions is available at https://console.bluemix.net/docs/tutorials/slack-chatbot-database-watson.html. The tutorial is part of the [IBM Cloud tutorials](https://console.bluemix.net/docs/tutorials/index.html) 
 
 # Files in this repository
 The files in this repository have the following purpose:
 * [cleanup.sh](cleanup.sh): shell script to drop Db2 table and delete Db2-related Cloud Functions actions
-* [conversation-workspace.json](conversation-workspace.json): Workspace file used with IBM Watson Conversation service
-* [create-services.sh](create-services.sh): shell script which can be used to create Db2 Warehouse and Conversation services
+* [conversation-workspace.json](conversation-workspace.json): Workspace file used with IBM Watson Assistant service
+* [create-services.sh](create-services.sh): shell script which can be used to create Db2 Warehouse and Assistant services
 * [db2-setup.js](db2-setup.js): code for Cloud Functions action which creates a Db2 table, fills it with sample data or cleans it up
 * [eventFetch.js](eventFetch.js): code for Cloud Functions action which searches event data by identifier
 * [eventFetchDate.js](eventFetchDate.js): code for Cloud Functions action which searches event data by dates
