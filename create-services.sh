@@ -1,4 +1,4 @@
 # Create the services
-bx service create dashDB Entry eventDB
-bx service key-create eventDB slackbotkey
-bx service create conversation free eventConversation
+ibmcloud service create dashDB Entry eventDB
+ibmcloud service key-create eventDB slackbotkey
+ibmcloud service create conversation free eventConversation
