@@ -1,0 +1,19 @@
+{
+  "name": "botkit-middleware-simple-slack-bot",
+  "version": "0.0.1",
+  "description": "Simple Slack bot example using botkit-middleware-watson with Botkit",
+  "main": "simple-slack-bot.js",
+  "scripts": {
+    "start": "node simple-slack-bot.js"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "botkit": "^0.6.16",
+    "@types/bluebird": "^3.5.22",
+    "clone": "^2.0.0",
+    "bluebird": "^3.5.1",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "botkit-middleware-watson": "^1.6.1"
+  }
+}
