@@ -1,5 +1,5 @@
 # Build a database-driven Slackbot with IBM Watson™ Assistant (Conversation)
-Code to build a Slackbot to create and search Db2 database entries for events and conferences. The Slackbot is backed by the IBM Watson Assistant (Conversation) service. We integrate Slack and Assistant using the Conversation connector in a serverless way. 
+Code to build a Slackbot to create and search Db2 database entries for events and conferences. The Slackbot is backed by the IBM Watson Assistant (Conversation) service. We integrate Slack and Assistant using the [Botkit middleware](https://github.com/watson-developer-cloud/botkit-middleware). 
 
 The tutorial with detailed step-by-step instructions is available at https://console.bluemix.net/docs/tutorials/slack-chatbot-database-watson.html. The tutorial is part of the [IBM Cloud tutorials](https://console.bluemix.net/docs/tutorials/index.html) 
 
@@ -12,11 +12,10 @@ The files in this repository have the following purpose:
 * [eventFetch.js](eventFetch.js): code for Cloud Functions action which searches event data by identifier
 * [eventFetchDate.js](eventFetchDate.js): code for Cloud Functions action which searches event data by dates
 * [eventInsert.js](eventInsert.js): code for Cloud Functions action to insert a new record into a Db2 database
-* [pre-conversation-APIKey.js](pre-conversation-APIKey.js): code for Cloud Functions action to customize an action of the Conversation connector
 * [setup.sh](setup.sh): shell script to set up Cloud Functions actions, bind credentials, create a Db2 table and fill sample data
 * [tables.sql](tables.sql): table schema
-* [update-pre-conversation.sh](update-pre-conversation.sh): shell script to update the pre-conversation action
 
+The directory [botkit-app](botkit-app) contains the code for the Node.js app based on Botkit. See the tutorial for instructions to deploy it to Cloud Foundry. You can also test and use it locally.
 
 # Related Content
 Chatbot-related blog posts:
