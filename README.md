@@ -1,5 +1,5 @@
 # Build a database-driven Slackbot with IBM Watson™ Assistant (Conversation)
-Code to build a Slackbot to create and search Db2 database entries for events and conferences. The Slackbot is backed by the IBM Watson Assistant (Conversation) service. We integrate Slack and Assistant using the [Botkit middleware](https://github.com/watson-developer-cloud/botkit-middleware). 
+Code to build a Slackbot to create and search Db2 database entries for events and conferences. The Slackbot is backed by the IBM Watson Assistant (Conversation) service. We integrate Slack and Assistant using the [Botkit middleware](https://github.com/watson-developer-cloud/botkit-middleware). As an alternative, an IBM Cloud Databases for PostgreSQL database can be used instead of Db2. The related files have an additional `.pg.` in their name. 
 
 The tutorial with detailed step-by-step instructions is available at https://console.bluemix.net/docs/tutorials/slack-chatbot-database-watson.html. The tutorial is part of the [IBM Cloud tutorials](https://console.bluemix.net/docs/tutorials/index.html) 
 
@@ -16,6 +16,16 @@ The files in this repository have the following purpose:
 * [tables.sql](tables.sql): table schema
 
 The directory [botkit-app](botkit-app) contains the code for the Node.js app based on Botkit. See the tutorial for instructions to deploy it to Cloud Foundry. You can also test and use it locally.
+
+# File for IBM Cloud Databases for PostgreSQL
+The following files are adapted versions to be used for PostgreSQL instead of Db2:
+* [cleanup.pg.sh](cleanup.pg.sh): shell script to drop PostgreSQL table and delete related Cloud Functions actions
+* [postgreSQL-setup.js](postgreSQL-setup.js): code for Cloud Functions action which creates a PostgreSQL table, fills it with sample data or cleans it up
+* [eventFetch.pg.js](eventFetch.pg.js): code for Cloud Functions action which searches event data by identifier
+* [eventFetchDate.pg.js](eventFetchDate.pg.js): code for Cloud Functions action which searches event data by dates
+* [eventInsert.pg.js](eventInsert.pg.js): code for Cloud Functions action to insert a new record into a PostgreSQL database
+* [setup.pg.sh](setup.pg.sh): shell script to set up Cloud Functions actions, bind credentials, create a PostgreSQL table and fill sample data
+
 
 # Related Content
 Chatbot-related blog posts:
