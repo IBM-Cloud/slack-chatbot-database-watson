@@ -7,9 +7,9 @@ var rp = require('request-promise');
   * Written by Henrik Loeser
   */
 
-function fetchEventByDates(connection, eventdates) {
+function fetchEventByDates(dbURI, eventdates) {
   const client=new Client({
-    connectionString: connection['postgres']['composed'][0],
+    connectionString: dbURI,
     ssl: true
   });
 
@@ -25,12 +25,12 @@ function fetchEventByDates(connection, eventdates) {
      .then(() => {
         resString='';
         for (var i=0;i<myres.rowCount;i++) {
-          resString+="name: "+myres.rows[i]['shortname']+" location: "+myres.rows[i]['location']+" info: "+myres.rows[i]['contac']+" Start: "+myres.rows[i]['begindate']+" End: "+myres.rows[i]['enddate']+"\n"
+          resString+="name: "+myres.rows[i]['shortname']+" location: "+myres.rows[i]['location']+" info: "+myres.rows[i]['contact']+" Start: "+myres.rows[i]['begindate']+" End: "+myres.rows[i]['enddate']+"\n"
         };
-        return {"result": resString, "data" : myres} })
+        return {"result": resString, "data" : myres.rows} })
      .catch(e => {return {"error": e}})
 }
 
 function main({eventdates, __bx_creds: {'databases-for-postgresql': {connection}}}) {
-	return fetchEventByDates(connection,eventdates);
+	return fetchEventByDates(dbURI=connection['postgres']['composed'][0],eventdates);
 }

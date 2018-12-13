@@ -17,7 +17,7 @@ The files in this repository have the following purpose:
 
 The directory [botkit-app](botkit-app) contains the code for the Node.js app based on Botkit. See the tutorial for instructions to deploy it to Cloud Foundry. You can also test and use it locally.
 
-# File for IBM Cloud Databases for PostgreSQL
+# Files for IBM Cloud Databases for PostgreSQL
 The following files are adapted versions to be used for PostgreSQL instead of Db2:
 * [cleanup.pg.sh](cleanup.pg.sh): shell script to drop PostgreSQL table and delete related Cloud Functions actions
 * [postgreSQL-setup.js](postgreSQL-setup.js): code for Cloud Functions action which creates a PostgreSQL table, fills it with sample data or cleans it up

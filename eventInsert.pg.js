@@ -7,9 +7,9 @@ var rp = require('request-promise');
   * Written by Henrik Loeser
   */
 
-function insertEvent(connection, eventValues) {
+function insertEvent(dbURI, eventValues) {
   const client=new Client({
-    connectionString: connection['postgres']['composed'][0],
+    connectionString: dbURI,
     ssl: true
   });
 
@@ -25,5 +25,5 @@ function insertEvent(connection, eventValues) {
 }
 
 function main({eventValues, __bx_creds: {'databases-for-postgresql': {connection}}}) {
-	return insertEvent(connection,eventValues);
+	return insertEvent(dbURI=connection['postgres']['composed'][0],eventValues);
 }

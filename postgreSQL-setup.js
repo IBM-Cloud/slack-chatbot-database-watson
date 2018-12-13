@@ -6,7 +6,7 @@ var rp = require('request-promise');
   * Written by Henrik Loeser
   */
 
-function dbSetup(connection, mode) {
+function dbSetup(dbURI, mode) {
  
     var tabledef="create table events "+
                  "(eid int not null generated always as identity (start with 1000 increment by 1),"+
@@ -19,7 +19,7 @@ function dbSetup(connection, mode) {
     var tabledrop="drop table events;"
     
     const client=new Client({
-      connectionString: connection['postgres']['composed'][0],
+      connectionString: dbURI,
       ssl: true
     });
 
@@ -47,5 +47,5 @@ function dbSetup(connection, mode) {
 }
 
 function main({mode, __bx_creds: {'databases-for-postgresql': {connection}}}) {
-  	return dbSetup(connection, mode);
+  	return dbSetup(dbURI=connection['postgres']['composed'][0], mode);
 }
