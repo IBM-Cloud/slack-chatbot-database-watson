@@ -26,6 +26,14 @@ The following files are adapted versions to be used for PostgreSQL instead of Db
 * [eventInsert.pg.js](eventInsert.pg.js): code for Cloud Functions action to insert a new record into a PostgreSQL database
 * [setup.pg.sh](setup.pg.sh): shell script to set up Cloud Functions actions, bind credentials, create a PostgreSQL table and fill sample data
 
+# Changes for IBM Cloud Hyper Protect DBaaS
+IBM Cloud offers [Hyper Protect DBaaS](https://console.bluemix.net/catalog/services/hyper-protect-dbaas) as highly secured data storage service. One of the options is PostgreSQL as database system. If you want to use the PostgreSQL code from the previous section, then you only need to adapt the functions in the way how credentials are passed. Replace `dbSetup` with the other function names.
+
+```
+function main({mode, __bx_creds: {'hypersecuredbaas': {url}}}) {
+  	return dbSetup(dbURI=url, mode);
+}
+```
 
 # Related Content
 Chatbot-related blog posts:
