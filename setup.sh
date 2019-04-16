@@ -3,6 +3,13 @@
 #
 # Written by Henrik Loeser
 
+if [ -z "$1" ]; then 
+              echo usage: $0 theSecret
+              exit
+fi
+theSecret=$1
+
+
 # create Db2 Warehouse service and service credentials
 # ibmcloud service create dashDB Entry eventDB
 # ibmcloud service key-create eventDB slackbotkey
@@ -24,13 +31,13 @@ ibmcloud fn action invoke slackdemo/db2Setup -p mode "[\"setup\"]" -r
 ibmcloud fn action invoke slackdemo/db2Setup -p mode "[\"sampledata\"]" -r
 
 # action to fetch a single event by name
-ibmcloud fn action create slackdemo/fetchEventByShortname eventFetch.js  --kind nodejs:8
+ibmcloud fn action create slackdemo/fetchEventByShortname eventFetch.js  --kind nodejs:8 --web true --web-secure $theSecret
 ibmcloud fn service bind dashDB slackdemo/fetchEventByShortname --instance eventDB
 
 # action to fetch a single event by dates
-ibmcloud fn action create slackdemo/fetchEventByDates eventFetchDate.js  --kind nodejs:8
+ibmcloud fn action create slackdemo/fetchEventByDates eventFetchDate.js  --kind nodejs:8 --web true --web-secure $theSecret
 ibmcloud fn service bind dashDB slackdemo/fetchEventByDates  --instance eventDB
 
 # action to insert a new event
-ibmcloud fn action create slackdemo/eventInsert eventInsert.js  --kind nodejs:8
+ibmcloud fn action create slackdemo/eventInsert eventInsert.js  --kind nodejs:8 --web true --web-secure $theSecret
 ibmcloud fn service bind dashDB slackdemo/eventInsert  --instance eventDB

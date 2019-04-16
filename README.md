@@ -5,6 +5,7 @@ The tutorial with detailed step-by-step instructions is available at https://con
 
 # Files in this repository
 The files in this repository have the following purpose:
+* [changeActionSecret.sh](changeActionSecret.sh): shell script to update (change) the secret for invoking the web actions used by the chatbot. You still need to manually update the related dialog node.
 * [cleanup.sh](cleanup.sh): shell script to drop Db2 table and delete Db2-related Cloud Functions actions
 * [conversation-workspace.json](conversation-workspace.json): Workspace file used with IBM Watson Assistant service
 * [create-services.sh](create-services.sh): shell script which can be used to create Db2 Warehouse and Assistant services
