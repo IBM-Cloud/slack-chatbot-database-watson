@@ -1,4 +1,4 @@
-**This branch contains the code which was provided for an older version of the tutorial. The code is no longer maintained. The [old instructions have are available in the INSTRUCTIONS.md file](INSTRUCTIONS.md).**
+**This branch contains the code which was provided for an older version of the tutorial. The code is no longer maintained. The [old tutorial instructions are available in the INSTRUCTIONS.md file](INSTRUCTIONS.md).**
 
 # Build a database-driven Slackbot with IBM Watson™ Assistant (Conversation)
 Code to build a Slackbot to create and search Db2 database entries for events and conferences. The Slackbot is backed by the IBM Watson Assistant (Conversation) service. We integrate Slack and Assistant using the [Botkit middleware](https://github.com/watson-developer-cloud/botkit-middleware). As an alternative, an IBM Cloud Databases for PostgreSQL database can be used instead of Db2. The related files have an additional `.pg.` in their name. 
