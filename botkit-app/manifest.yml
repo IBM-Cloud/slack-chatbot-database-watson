@@ -1,4 +1,0 @@
-applications:
-- name: watson-botkit
-  memory: 256M
-  no-route: true

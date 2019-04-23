@@ -1,5 +1,9 @@
-# Build a database-driven Slackbot with IBM Watson™ Assistant (Conversation)
-Code to build a Slackbot to create and search Db2 database entries for events and conferences. The Slackbot is backed by the IBM Watson Assistant (Conversation) service. We integrate Slack and Assistant using the [Botkit middleware](https://github.com/watson-developer-cloud/botkit-middleware). As an alternative, an IBM Cloud Databases for PostgreSQL database can be used instead of Db2. The related files have an additional `.pg.` in their name. 
+**Note:**   
+An older code version along with the related instructions is kept in the [branch v1_upto_2019_04](https://github.com/IBM-Cloud/slack-chatbot-database-watson/tree/v1_upto_2019_04).
+
+# Build a database-driven Slackbot with IBM Watson™ Assistant
+
+Code to build a Slackbot to create and search Db2 database entries for events and conferences. The Slackbot is backed by the IBM Watson Assistant service. As an alternative, an IBM Cloud Databases for PostgreSQL database can be used instead of Db2. The related files have an additional `.pg.` in their name. 
 
 The tutorial with detailed step-by-step instructions is available at https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-slack-chatbot-database-watson#slack-chatbot-database-watson. The tutorial is part of the [IBM Cloud tutorials](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-tutorials#tutorials) 
 
@@ -16,7 +20,6 @@ The files in this repository have the following purpose:
 * [setup.sh](setup.sh): shell script to set up Cloud Functions actions, bind credentials, create a Db2 table and fill sample data
 * [tables.sql](tables.sql): table schema
 
-The directory [botkit-app](botkit-app) contains the code for the Node.js app based on Botkit. See the tutorial for instructions to deploy it to Cloud Foundry. You can also test and use it locally.
 
 # Files for IBM Cloud Databases for PostgreSQL
 The following files are adapted versions to be used for PostgreSQL instead of Db2:

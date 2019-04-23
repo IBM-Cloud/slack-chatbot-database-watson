@@ -1,2 +1,0 @@
-# Botkit app for Watson Assistant
-This directory contains the app [simple-slack-bot.js](simple-slack-bot.js). It is based on Botkit and links Slack to IBM Watson Assistant. The Node.js app can be run and test locally or pushed to IBM Cloud with Cloud Foundry.
