@@ -14,7 +14,7 @@ function db2Setup(dsn, mode) {
                   "begindate timestamp not null,"+
                   "enddate timestamp not null,"+
                   "contact varchar(255) not null);";
-    var sampledata="insert into events(shortname,location,begindate,enddate,contact) values('Think 2018','Las Vegas','2018-03-19 00:00:00','2018-03-22 23:59:00','https://www.ibm.com/events/think/'),('IDUG2018','Philadelphia','2018-04-29 00:00:00','2018-05-03 23:59:00','http://www.idug.org/na2018');"
+    var sampledata="insert into events(shortname,location,begindate,enddate,contact) values('Think 2019','San Francisco','2019-02-12 00:00:00','2018-02-15 23:59:00','https://www.ibm.com/events/think/'),('IDUG2019','Charlotte','2019-06-02 00:00:00','2019-06-06 23:59:00','http://www.idug.org');"
     var tabledrop="drop table events;"
     var conn=ibmdb.openSync(dsn);
     if (mode=="setup")

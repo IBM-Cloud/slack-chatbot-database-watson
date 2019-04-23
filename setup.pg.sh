@@ -3,6 +3,12 @@
 #
 # Written by Henrik Loeser
 
+if [ -z "$1" ]; then 
+              echo usage: $0 theSecret
+              exit
+fi
+theSecret=$1
+
 # create IBM Cloud Databases for PostgreSQL service and service credentials
 # ibmcloud resource service-instance-create eventDB databases-for-postgresql standard us-south
 # ibmcloud resource service-key-create slackbotkey Editor --instance-name eventDB
@@ -23,14 +29,14 @@ ibmcloud fn action invoke slackdemo/dbSetup -p mode "[\"setup\"]" -r
 ibmcloud fn action invoke slackdemo/dbSetup -p mode "[\"sampledata\"]" -r
 
 # action to fetch a single event by name
-ibmcloud fn action create slackdemo/fetchEventByShortname eventFetch.pg.js  --kind nodejs:8
+ibmcloud fn action create slackdemo/fetchEventByShortname eventFetch.pg.js  --kind nodejs:8 --web true --web-secure $theSecret
 ibmcloud fn service bind databases-for-postgresql slackdemo/fetchEventByShortname --instance ICD-PostgreSQL-Henrik
 
 # action to fetch a single event by dates
-ibmcloud fn action create slackdemo/fetchEventByDate eventFetchDate.pg.js  --kind nodejs:8
+ibmcloud fn action create slackdemo/fetchEventByDate eventFetchDate.pg.js  --kind nodejs:8 --web true --web-secure $theSecret
 ibmcloud fn service bind databases-for-postgresql slackdemo/fetchEventByDate --instance ICD-PostgreSQL-Henrik
 
 # action to insert a new event
-ibmcloud fn action create slackdemo/eventInsert eventInsert.pg.js  --kind nodejs:8
+ibmcloud fn action create slackdemo/eventInsert eventInsert.pg.js  --kind nodejs:8 --web true --web-secure $theSecret
 ibmcloud fn service bind databases-for-postgresql slackdemo/eventInsert  --instance ICD-PostgreSQL-Henrik
 

@@ -1,10 +1,11 @@
 # Build a database-driven Slackbot with IBM Watson™ Assistant (Conversation)
 Code to build a Slackbot to create and search Db2 database entries for events and conferences. The Slackbot is backed by the IBM Watson Assistant (Conversation) service. We integrate Slack and Assistant using the [Botkit middleware](https://github.com/watson-developer-cloud/botkit-middleware). As an alternative, an IBM Cloud Databases for PostgreSQL database can be used instead of Db2. The related files have an additional `.pg.` in their name. 
 
-The tutorial with detailed step-by-step instructions is available at https://console.bluemix.net/docs/tutorials/slack-chatbot-database-watson.html. The tutorial is part of the [IBM Cloud tutorials](https://console.bluemix.net/docs/tutorials/index.html) 
+The tutorial with detailed step-by-step instructions is available at https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-slack-chatbot-database-watson#slack-chatbot-database-watson. The tutorial is part of the [IBM Cloud tutorials](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-tutorials#tutorials) 
 
 # Files in this repository
 The files in this repository have the following purpose:
+* [changeActionSecret.sh](changeActionSecret.sh): shell script to update (change) the secret for invoking the web actions used by the chatbot. You still need to manually update the related dialog node.
 * [cleanup.sh](cleanup.sh): shell script to drop Db2 table and delete Db2-related Cloud Functions actions
 * [conversation-workspace.json](conversation-workspace.json): Workspace file used with IBM Watson Assistant service
 * [create-services.sh](create-services.sh): shell script which can be used to create Db2 Warehouse and Assistant services
@@ -27,7 +28,7 @@ The following files are adapted versions to be used for PostgreSQL instead of Db
 * [setup.pg.sh](setup.pg.sh): shell script to set up Cloud Functions actions, bind credentials, create a PostgreSQL table and fill sample data
 
 # Changes for IBM Cloud Hyper Protect DBaaS
-IBM Cloud offers [Hyper Protect DBaaS](https://console.bluemix.net/catalog/services/hyper-protect-dbaas) as highly secured data storage service. One of the options is PostgreSQL as database system. If you want to use the PostgreSQL code from the previous section, then you only need to adapt the functions in the way how credentials are passed. Replace `dbSetup` with the other function names.
+IBM Cloud offers [Hyper Protect DBaaS](https://cloud.ibm.com/catalog/services/hyper-protect-dbaas) as highly secured data storage service. One of the options is PostgreSQL as database system. If you want to use the PostgreSQL code from the previous section, then you only need to adapt the functions in the way how credentials are passed. Replace `dbSetup` with the other function names.
 
 ```
 function main({mode, __bx_creds: {'hypersecuredbaas': {url}}}) {
