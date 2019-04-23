@@ -41,7 +41,9 @@ function main({mode, __bx_creds: {'hypersecuredbaas': {url}}}) {
 
 # Related Content
 Chatbot-related blog posts:
+* [Database-driven Slack chatbot with Conversation service](https://www.ibm.com/blogs/bluemix/2018/02/database-slack-chatbot-conversation/)
+* [Slack Chatbot with PostgreSQL Backend](https://www.ibm.com/blogs/bluemix/2018/12/slack-chatbot-with-postgresql-backend/)
 * [Chatbots: Some tricks with slots in IBM Watson Conversation](https://www.ibm.com/blogs/bluemix/2018/02/chatbots-some-tricks-with-slots-in-ibm-watson-conversation/)
 * [Lively chatbots: Best Practices](https://www.ibm.com/blogs/bluemix/2017/07/lively-chatbots-best-practices/)
-* [Building chatbots: more tipcs and tricks](https://www.ibm.com/blogs/bluemix/2017/06/building-chatbots-tips-tricks/)
+* [Building chatbots: more tips and tricks](https://www.ibm.com/blogs/bluemix/2017/06/building-chatbots-tips-tricks/)
 
