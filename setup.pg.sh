@@ -14,7 +14,7 @@ theSecret=$1
 # ibmcloud resource service-key-create slackbotkey Editor --instance-name eventDB
 
 # create IBM Watson Assistant (Conversation) service
-# ibmcloud service create conversation free eventConversation
+# ibmcloud cf create-service conversation free eventConversation
 # create package
 ibmcloud fn package create slackdemo
 

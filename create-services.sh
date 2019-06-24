@@ -1,4 +1,4 @@
 # Create the services
-ibmcloud service create dashDB Entry eventDB
-ibmcloud service key-create eventDB slackbotkey
-ibmcloud service create conversation free eventConversation
+ibmcloud cf create-service dashDB Entry eventDB
+ibmcloud cf create-service-key eventDB slackbotkey
+ibmcloud cf create-service conversation free eventConversation

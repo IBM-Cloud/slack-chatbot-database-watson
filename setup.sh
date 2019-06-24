@@ -11,11 +11,11 @@ theSecret=$1
 
 
 # create Db2 Warehouse service and service credentials
-# ibmcloud service create dashDB Entry eventDB
-# ibmcloud service key-create eventDB slackbotkey
+# ibmcloud cf create-service dashDB Entry eventDB
+# ibmcloud cf create-service-key eventDB slackbotkey
 
 # create IBM Watson Assistant (Conversation) service
-# ibmcloud service create conversation free eventConversation
+# ibmcloud cf create-service conversation free eventConversation
 
 # create package
 ibmcloud fn package create slackdemo
