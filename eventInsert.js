@@ -17,6 +17,7 @@ function insertEvent(dsn, eventValues) {
  }
 }
 
-function main({eventValues, __bx_creds: {dashDB:{dsn}}}) {
-	return insertEvent(dsn,eventValues);
+function main(params) {
+  dsn=params.__bx_creds[Object.keys(params.__bx_creds)[0]].dsn;
+	return insertEvent(dsn,params.eventValues);
 }

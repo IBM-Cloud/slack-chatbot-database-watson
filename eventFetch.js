@@ -22,6 +22,8 @@ function fetchEventByShortname(dsn, eventname) {
  }
 }
 
-function main({eventname, __bx_creds: {dashDB:{dsn}}}) {
-	return fetchEventByShortname(dsn,eventname);
+function main(params) {
+  dsn=params.__bx_creds[Object.keys(params.__bx_creds)[0]].dsn;
+	return fetchEventByShortname(dsn,params.eventname);
 }
+

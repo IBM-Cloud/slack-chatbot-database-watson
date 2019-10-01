@@ -22,6 +22,8 @@ function fetchEventByDates(dsn, eventdates) {
  }
 }
 
-function main({eventdates, __bx_creds: {dashDB:{dsn}}}) {
-	return fetchEventByDates(dsn,eventdates);
+
+function main(params) {
+  dsn=params.__bx_creds[Object.keys(params.__bx_creds)[0]].dsn;
+	return fetchEventByDates(dsn,params.eventdates);
 }
