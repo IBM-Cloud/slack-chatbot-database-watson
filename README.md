@@ -12,7 +12,6 @@ The files in this repository have the following purpose:
 * [changeActionSecret.sh](changeActionSecret.sh): shell script to update (change) the secret for invoking the web actions used by the chatbot. You still need to manually update the related dialog node.
 * [cleanup.sh](cleanup.sh): shell script to drop Db2 table and delete Db2-related Cloud Functions actions
 * [conversation-workspace.json](conversation-workspace.json): Workspace file used with IBM Watson Assistant service
-* [create-services.sh](create-services.sh): shell script which can be used to create Db2 Warehouse and Assistant services
 * [db2-setup.js](db2-setup.js): code for Cloud Functions action which creates a Db2 table, fills it with sample data or cleans it up
 * [eventFetch.js](eventFetch.js): code for Cloud Functions action which searches event data by identifier
 * [eventFetchDate.js](eventFetchDate.js): code for Cloud Functions action which searches event data by dates
