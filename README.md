@@ -1,5 +1,7 @@
 **Note:**   
-An older code version along with the related instructions is kept in the [branch v1_upto_2019_04](https://github.com/IBM-Cloud/slack-chatbot-database-watson/tree/v1_upto_2019_04).
+Code relating to a previous version of the tutorial that utilized Cloud Foundry organization and spaces for IBM Cloud Functions is available in the branch [CloudFoundry-based-20191114](https://github.com/IBM-Cloud/slack-chatbot-database-watson/tree/CloudFoundry-based-20191114). The current version is based on using IAM namespaces for Cloud Functions packages and actions.
+
+An even older code version along with the related instructions is kept in the [branch v1_upto_2019_04](https://github.com/IBM-Cloud/slack-chatbot-database-watson/tree/v1_upto_2019_04).
 
 # Build a database-driven Slackbot with IBM Watson™ Assistant
 

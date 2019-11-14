@@ -7,7 +7,7 @@ if [ -z "$1" ]; then
               echo usage: $0 theSecret
               exit
 fi
-theSecret=$1
+theSecret="$1"
 
 # create IBM Cloud Databases for PostgreSQL service and service credentials
 # ibmcloud resource service-instance-create eventDB databases-for-postgresql standard us-south

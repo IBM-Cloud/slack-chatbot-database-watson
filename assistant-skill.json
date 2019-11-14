@@ -464,7 +464,7 @@
             "parent": "node_9_1517403528441",
             "actions": [
                 {
-                    "name": "/$private.cforg/slackdemo/fetchEventByDates.json",
+                    "name": "/$private.fn_namespace/slackdemo/fetchEventByDates.json",
                     "type": "web_action",
                     "parameters": {
                         "eventdates": [
@@ -632,7 +632,7 @@
             "parent": "node_1_1516878960414",
             "actions": [
                 {
-                    "name": "/$private.cforg/slackdemo/fetchEventByShortname.json",
+                    "name": "/$private.fn_namespace/slackdemo/fetchEventByShortname.json",
                     "type": "web_action",
                     "parameters": {
                         "eventname": [
@@ -753,7 +753,7 @@
             "parent": "node_1_1555322650982",
             "actions": [
                 {
-                    "name": "/$private.cforg/slackdemo/eventInsert.json",
+                    "name": "/$private.fn_namespace/slackdemo/eventInsert.json",
                     "type": "web_action",
                     "parameters": {
                         "eventValues": [
@@ -1038,7 +1038,7 @@
             },
             "context": {
                 "private": {
-                    "cforg": "org_space",
+                    "fn_namespace": "FN_NAMESPACE",
                     "icfsecret": {
                         "web_action_key": "YOURSECRET"
                     }
