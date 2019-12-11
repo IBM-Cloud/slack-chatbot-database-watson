@@ -725,7 +725,7 @@
       "headers": [
         {
           "name": "X-Require-Whisk-Auth",
-          "value": "YOUR_SECRET"
+          "value": "YOURSECRET"
         }
       ]
     }
