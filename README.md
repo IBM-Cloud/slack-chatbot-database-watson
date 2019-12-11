@@ -1,4 +1,6 @@
 **Note:**   
+Code relating to a previous version of the tutorial that utilized the now deprecated `web_action` to call Cloud Function actions is  available in the branch [20191211_web_action](https://github.com/IBM-Cloud/slack-chatbot-database-watson/tree/20191211_web_action). The current version is using a webhook in IBM Watson Assistant to invoke the serverless functionality.
+
 Code relating to a previous version of the tutorial that utilized Cloud Foundry organization and spaces for IBM Cloud Functions is available in the branch [CloudFoundry-based-20191114](https://github.com/IBM-Cloud/slack-chatbot-database-watson/tree/CloudFoundry-based-20191114). The current version is based on using IAM namespaces for Cloud Functions packages and actions.
 
 An even older code version along with the related instructions is kept in the [branch v1_upto_2019_04](https://github.com/IBM-Cloud/slack-chatbot-database-watson/tree/v1_upto_2019_04).
