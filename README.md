@@ -9,7 +9,7 @@ An even older code version along with the related instructions is kept in the [b
 
 Code to build a Slackbot to create and search Db2 database entries for events and conferences. The Slackbot is backed by the IBM Watson Assistant service. In older versions of this tutorial, an IBM Cloud Databases for PostgreSQL database could be used instead of Db2. The related files have an additional `.pg.` in their name and code can be found in the historic branches. 
 
-The tutorial with detailed step-by-step instructions is available at https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-slack-chatbot-database-watson#slack-chatbot-database-watson. The tutorial is part of the [IBM Cloud tutorials](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-tutorials#tutorials) 
+The tutorial with detailed step-by-step instructions is available at https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-slack-chatbot-database-watson#slack-chatbot-database-watson. The tutorial is part of the [IBM Cloud tutorials](https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-tutorials#tutorials) 
 
 # Files in this repository
 The files in this repository have the following purpose:
