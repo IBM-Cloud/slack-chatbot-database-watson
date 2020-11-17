@@ -37,6 +37,7 @@ function db2Setup(dsn, mode) {
 function main(params) {
   dsn=params.__bx_creds[Object.keys(params.__bx_creds)[0]].dsn;
   
+  // dsn does not exist in the DB2 credential for Standard instance. It must be built manually
   if(!dsn) {
     const dbname = params.__bx_creds[Object.keys(params.__bx_creds)[0]].connection.db2.database;
     const hostname = params.__bx_creds[Object.keys(params.__bx_creds)[0]].connection.db2.hosts[0].hostname;
