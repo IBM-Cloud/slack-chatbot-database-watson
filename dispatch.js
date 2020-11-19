@@ -66,8 +66,6 @@ function main(params) {
         
         //dsn="DATABASE=;HOSTNAME=;PORT=;PROTOCOL=;UID=;PWD=;Security=SSL";
         dsn = `DATABASE=${dbname};HOSTNAME=${hostname};PORT=${port};PROTOCOL=${protocol};UID=${uid};PWD=${password};Security=SSL`;
-        //console.log(`manually created DSN string: '' - NOTE: REMOVE THIS LOG LINE, AS IT LOGS CREDENTIALS`);
-        //console.log(dsn);
     }
     
     switch(params.actionname) {
