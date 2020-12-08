@@ -36,5 +36,20 @@ function db2Setup(dsn, mode) {
 
 function main(params) {
   dsn=params.__bx_creds[Object.keys(params.__bx_creds)[0]].dsn;
-	return db2Setup(dsn, params.mode);
+  
+  // dsn does not exist in the DB2 credential for Standard instance. It must be built manually
+  if(!dsn) {
+    const dbname = params.__bx_creds[Object.keys(params.__bx_creds)[0]].connection.db2.database;
+    const hostname = params.__bx_creds[Object.keys(params.__bx_creds)[0]].connection.db2.hosts[0].hostname;
+    const port = params.__bx_creds[Object.keys(params.__bx_creds)[0]].connection.db2.hosts[0].port;
+    const protocol = 'TCPIP';
+    const uid = params.__bx_creds[Object.keys(params.__bx_creds)[0]].connection.db2.authentication.username;
+    const password = params.__bx_creds[Object.keys(params.__bx_creds)[0]].connection.db2.authentication.password;
+    
+    //dsn="DATABASE=;HOSTNAME=;PORT=;PROTOCOL=;UID=;PWD=;Security=SSL";
+    dsn = `DATABASE=${dbname};HOSTNAME=${hostname};PORT=${port};PROTOCOL=${protocol};UID=${uid};PWD=${password};Security=SSL`;
+
+  }
+  
+  return db2Setup(dsn, params.mode);
 }
