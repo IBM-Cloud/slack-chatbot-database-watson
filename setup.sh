@@ -21,7 +21,7 @@ ibmcloud fn property set --namespace slackbot
 ibmcloud fn package create slackdemo
 
 # create action for setup using Node.js environment
-ibmcloud fn action create slackdemo/db2Setup db2-setup.js  --kind nodejs:10
+ibmcloud fn action create slackdemo/db2Setup db2-setup.js  --kind nodejs:12
 
 # bind action to Db2 credentials
 ibmcloud fn service bind $DB_SERVICE slackdemo/db2Setup  --instance eventDB
@@ -31,5 +31,5 @@ ibmcloud fn action invoke slackdemo/db2Setup -p mode "[\"setup\"]" -r
 ibmcloud fn action invoke slackdemo/db2Setup -p mode "[\"sampledata\"]" -r
 
 # dispatcher with subfunctions as single action
-ibmcloud fn action create slackdemo/dispatch dispatch.js  --kind nodejs:10 --web true --web-secure $theSecret
+ibmcloud fn action create slackdemo/dispatch dispatch.js  --kind nodejs:12 --web true --web-secure $theSecret
 ibmcloud fn service bind $DB_SERVICE slackdemo/dispatch --instance eventDB
