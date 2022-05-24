@@ -8,12 +8,6 @@ This repository contains the code for IBM Cloud solution tutorial [Build a datab
 
 ![Architecture](images/SlackbotArchitecture.svg)
 
-# OpenAPI Specification
-The Python app is based on the [APIFlask](https://apiflask.com/) API framework which itself is based on Flask. The OpenAPI specification for the application can be (re-)generated using
-```
-flask spec --output slackbot-openapi-spec.json
-```
-
 # Run and test locally
 
 The app was tested with Python 3.10. You can either run the app directly or first build, then run it as container.
@@ -36,6 +30,14 @@ Create or recreate the database objects by calling the following API. Adapt the 
 ```
 curl -X 'POST'  'http://127.0.0.1:5000/database/recreate?confirmation=True' -H 'accept: application/json' -H 'X-API-Key: MY_SECRET'
 ```
+
+# OpenAPI Specification
+The Python app is based on the [APIFlask](https://apiflask.com/) API framework which itself is based on Flask. The OpenAPI specification for the application can be (re-)generated using
+```
+flask spec --output slackbot-openapi-spec.json
+```
+
+You can also access the running app at the `/docs` (Swagger UI) and `/redoc` (Redoc) endpoints for interactive API documentation.
 
 ## License
 
