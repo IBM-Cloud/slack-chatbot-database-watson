@@ -1,0 +1,38 @@
+name: Publish container image
+
+on:
+  push:
+    branches:
+      - custom-extension
+
+jobs:
+  publish_to_registry:
+    name: Build and push image to registry
+    runs-on: ubuntu-latest
+    env:
+      ICR_NAMESPACE: solution-tutorials
+      ICR_REPOSITORY: tutorial-slack-chatbot-database
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+
+      - name: Log in to Container Registry
+        uses: docker/login-action@v1.10.0
+        with:
+          registry: icr.io
+          username: ${{ secrets.ICR_USER }}
+          password: ${{ secrets.ICR_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v3
+        with:
+          images: icr.io/${{ env.ICR_NAMESPACE }}/${{ env.ICR_REPOSITORY }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@v2
+        with:
+          context: backend
+          push: true
+          tags: icr.io/${{ env.ICR_NAMESPACE }}/${{ env.ICR_REPOSITORY }}:latest
+          labels: ${{ steps.meta.outputs.labels }}
