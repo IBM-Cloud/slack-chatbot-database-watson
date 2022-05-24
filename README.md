@@ -32,12 +32,12 @@ curl -X 'POST'  'http://127.0.0.1:5000/database/recreate?confirmation=True' -H '
 ```
 
 # OpenAPI Specification
-The Python app is based on the [APIFlask](https://apiflask.com/) API framework which itself is based on Flask. The OpenAPI specification for the application can be (re-)generated using
+The Python app is based on the [APIFlask](https://apiflask.com/) API framework which itself is based on Flask. [The OpenAPI specification for the application can be (re-)generated using](https://apiflask.com/openapi/):
 ```
 flask spec --output slackbot-openapi-spec.json
 ```
 
-You can also access the running app at the `/docs` (Swagger UI) and `/redoc` (Redoc) endpoints for interactive API documentation.
+You can also access the running app at the `/docs` (Swagger UI) and `/redoc` (Redoc) endpoints for interactive API documentation. See the [APIFlask documentation on Swagger UI and Redoc](https://apiflask.com/api-docs/) for details.
 
 ## License
 
