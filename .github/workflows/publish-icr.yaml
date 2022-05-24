@@ -4,7 +4,9 @@ on:
   push:
     branches:
       - custom-extension
-
+    paths-ignore:
+      - 'README.md'
+      - 'images/**'
 jobs:
   publish_to_registry:
     name: Build and push image to registry
