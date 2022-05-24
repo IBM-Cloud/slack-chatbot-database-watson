@@ -36,7 +36,7 @@ if ENV_TABLE_ARGS:
 
 # Set how this API should be titled and the current version
 API_TITLE='Events API for Watson Assistant'
-API_VERSION='0.8.1'
+API_VERSION='1.0.1'
 
 app = APIFlask(__name__, title=API_TITLE, version=API_VERSION)
 
@@ -172,7 +172,8 @@ def get_event_name(short_name):
     """Event record by name
     Retrieve a single event record by its short name
     """
-    return EventModel.query.filter_by(shortname=short_name).first()
+    search="%{}%".format(short_name)
+    return EventModel.query.filter(EventModel.shortname.like(search)).first()
 
 
 # get all events

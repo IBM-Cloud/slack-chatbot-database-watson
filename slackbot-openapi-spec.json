@@ -57,21 +57,21 @@
         "parameters": [
           {
             "in": "query",
-            "name": "page",
-            "required": false,
-            "schema": {
-              "type": "integer",
-              "default": 1
-            }
-          },
-          {
-            "in": "query",
             "name": "per_page",
             "required": false,
             "schema": {
               "type": "integer",
               "default": 20,
               "maximum": 30
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 1
             }
           }
         ],
@@ -408,27 +408,38 @@
         },
         "type": "object"
       },
+      "EventOut": {
+        "type": "object",
+        "properties": {
+          "shortname": {
+            "type": "string"
+          },
+          "enddate": {
+            "type": "string",
+            "format": "date"
+          },
+          "begindate": {
+            "type": "string",
+            "format": "date"
+          },
+          "eid": {
+            "type": "integer"
+          },
+          "contact": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          }
+        }
+      },
       "Pagination": {
         "type": "object",
         "properties": {
-          "next": {
-            "type": "string",
-            "format": "url"
-          },
-          "pages": {
-            "type": "integer"
-          },
-          "page": {
-            "type": "integer"
-          },
-          "total": {
+          "per_page": {
             "type": "integer"
           },
           "current": {
-            "type": "string",
-            "format": "url"
-          },
-          "last": {
             "type": "string",
             "format": "url"
           },
@@ -436,62 +447,56 @@
             "type": "string",
             "format": "url"
           },
-          "first": {
+          "pages": {
+            "type": "integer"
+          },
+          "next": {
             "type": "string",
             "format": "url"
           },
-          "per_page": {
-            "type": "integer"
-          }
-        }
-      },
-      "EventOut": {
-        "type": "object",
-        "properties": {
-          "begindate": {
+          "last": {
             "type": "string",
-            "format": "date"
+            "format": "url"
           },
-          "enddate": {
-            "type": "string",
-            "format": "date"
-          },
-          "contact": {
-            "type": "string"
-          },
-          "shortname": {
-            "type": "string"
-          },
-          "location": {
-            "type": "string"
-          },
-          "eid": {
+          "total": {
             "type": "integer"
+          },
+          "page": {
+            "type": "integer"
+          },
+          "first": {
+            "type": "string",
+            "format": "url"
           }
         }
       },
       "EventsOut": {
         "type": "object",
         "properties": {
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
-          },
           "events": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/EventOut"
             }
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
           }
         }
       },
       "EventIn": {
         "type": "object",
         "properties": {
-          "begindate": {
+          "shortname": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 20
+          },
+          "enddate": {
             "type": "string",
             "format": "date"
           },
-          "enddate": {
+          "begindate": {
             "type": "string",
             "format": "date"
           },
@@ -499,11 +504,6 @@
             "type": "string",
             "minLength": 0,
             "maxLength": 255
-          },
-          "shortname": {
-            "type": "string",
-            "minLength": 0,
-            "maxLength": 20
           },
           "location": {
             "type": "string",
