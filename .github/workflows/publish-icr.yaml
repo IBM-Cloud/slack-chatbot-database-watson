@@ -32,7 +32,6 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v2
         with:
-          context: backend
           push: true
           tags: icr.io/${{ env.ICR_NAMESPACE }}/${{ env.ICR_REPOSITORY }}:latest
           labels: ${{ steps.meta.outputs.labels }}
