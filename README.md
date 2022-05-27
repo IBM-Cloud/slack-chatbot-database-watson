@@ -26,6 +26,13 @@ The file [.env.sample](.env.sample) shows a sample configuration:
 - API_TOKEN: Is the secret for the API key authentication.
 - TABLE_ARGS: Is an optional setting to specify a different table schema. The EVENTS table is created in the default schema for the connection. This can be overwritten.
 
+
+If you stored the Db2 credentials in a file **slackbotkey.json**, then use **jq** to create the URL using this command:
+```
+cat slackbotkey.json | jq '.[].credentials.connection.db2 | (.authentication.username + ":" + .authentication.password + "@" + .hosts[0].hostname + ":" + (.hosts[0].port | tostring) + "/" + .database + "?Security=SSL")'
+```
+The output follows this schema `db2+ibm_db://user:password@hostname.databases.appdomain.cloud:port/bludb?Security=SSL;`.
+
 Create or recreate the database objects by calling the following API. Adapt the host, port, and API key as necessary.
 ```
 curl -X 'POST'  'http://127.0.0.1:5000/database/recreate?confirmation=True' -H 'accept: application/json' -H 'X-API-Key: MY_SECRET'

@@ -28,8 +28,8 @@ app = APIFlask(__name__, title=API_TITLE, version=API_VERSION)
 # load .env if present
 load_dotenv()
 
-# the secret API key
-API_TOKEN=os.getenv('API_TOKEN')
+# the secret API key, plus we need a username in that record
+API_TOKEN="{{'{0}':'appuser'}}".format(os.getenv('API_TOKEN'))
 #convert to dict:
 tokens=ast.literal_eval(API_TOKEN)
 
