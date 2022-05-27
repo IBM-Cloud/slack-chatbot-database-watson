@@ -83,7 +83,7 @@ app.config['SERVERS'] = [
 
 
 # set how we want the authentication API key to be passed
-auth=HTTPTokenAuth(scheme='ApiKey', header='X-API-Key')
+auth=HTTPTokenAuth(scheme='ApiKey', header='API_TOKEN')
 
 # configure SQLAlchemy
 app.config['SQLALCHEMY_DATABASE_URI']=DB2_URI

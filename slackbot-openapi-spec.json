@@ -1,7 +1,7 @@
 {
   "info": {
     "title": "Events API for Watson Assistant",
-    "version": "0.8.1"
+    "version": "1.0.1"
   },
   "tags": [],
   "servers": [
@@ -408,38 +408,14 @@
         },
         "type": "object"
       },
-      "EventOut": {
-        "type": "object",
-        "properties": {
-          "shortname": {
-            "type": "string"
-          },
-          "enddate": {
-            "type": "string",
-            "format": "date"
-          },
-          "begindate": {
-            "type": "string",
-            "format": "date"
-          },
-          "eid": {
-            "type": "integer"
-          },
-          "contact": {
-            "type": "string"
-          },
-          "location": {
-            "type": "string"
-          }
-        }
-      },
       "Pagination": {
         "type": "object",
         "properties": {
-          "per_page": {
-            "type": "integer"
-          },
           "current": {
+            "type": "string",
+            "format": "url"
+          },
+          "first": {
             "type": "string",
             "format": "url"
           },
@@ -450,11 +426,14 @@
           "pages": {
             "type": "integer"
           },
-          "next": {
+          "last": {
             "type": "string",
             "format": "url"
           },
-          "last": {
+          "per_page": {
+            "type": "integer"
+          },
+          "next": {
             "type": "string",
             "format": "url"
           },
@@ -463,40 +442,56 @@
           },
           "page": {
             "type": "integer"
-          },
-          "first": {
+          }
+        }
+      },
+      "EventOut": {
+        "type": "object",
+        "properties": {
+          "begindate": {
             "type": "string",
-            "format": "url"
+            "format": "date"
+          },
+          "enddate": {
+            "type": "string",
+            "format": "date"
+          },
+          "contact": {
+            "type": "string"
+          },
+          "shortname": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "eid": {
+            "type": "integer"
           }
         }
       },
       "EventsOut": {
         "type": "object",
         "properties": {
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
           "events": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/EventOut"
             }
-          },
-          "pagination": {
-            "$ref": "#/components/schemas/Pagination"
           }
         }
       },
       "EventIn": {
         "type": "object",
         "properties": {
-          "shortname": {
-            "type": "string",
-            "minLength": 0,
-            "maxLength": 20
-          },
-          "enddate": {
+          "begindate": {
             "type": "string",
             "format": "date"
           },
-          "begindate": {
+          "enddate": {
             "type": "string",
             "format": "date"
           },
@@ -504,6 +499,11 @@
             "type": "string",
             "minLength": 0,
             "maxLength": 255
+          },
+          "shortname": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 20
           },
           "location": {
             "type": "string",
@@ -523,7 +523,7 @@
     "securitySchemes": {
       "ApiKeyAuth": {
         "type": "apiKey",
-        "name": "X-API-Key",
+        "name": "API_TOKEN",
         "in": "header"
       }
     }

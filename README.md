@@ -35,7 +35,7 @@ The output follows this schema `db2+ibm_db://user:password@hostname.databases.ap
 
 Create or recreate the database objects by calling the following API. Adapt the host, port, and API key as necessary.
 ```
-curl -X 'POST'  'http://127.0.0.1:5000/database/recreate?confirmation=True' -H 'accept: application/json' -H 'X-API-Key: MY_SECRET'
+curl -X 'POST'  'http://127.0.0.1:5000/database/recreate?confirmation=True' -H 'accept: application/json' -H 'API_TOKEN: MY_SECRET'
 ```
 
 # OpenAPI Specification
