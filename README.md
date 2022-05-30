@@ -46,6 +46,8 @@ flask spec --output slackbot-openapi-spec.json
 
 You can also access the running app at the `/docs` (Swagger UI) and `/redoc` (Redoc) endpoints for interactive API documentation. See the [APIFlask documentation on Swagger UI and Redoc](https://apiflask.com/api-docs/) for details.
 
+![Swagger UI](images/SwaggerUI.png)
+
 ## License
 
 See [License.txt](License.txt) for license information.
