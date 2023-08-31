@@ -1,0 +1,4 @@
+[build]
+  [[build.env]]
+    name = 'BP_CPYTHON_VERSION'
+    value = '3.10.*' # any valid semver constraints (e.g. 3.10.2, 3.*) are acceptable
