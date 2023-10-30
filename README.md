@@ -1,5 +1,5 @@
 **Note:**   
-This branch contains the code and the tutorial "Build a database-driven Slackbot" in the version prior to May 30, 2022.
+This branch contains the code and the tutorial "Build a database-driven Slackbot" in the version prior to May 30, 2022. It is based on the now deprecated IBM Cloud Functions.
 **See the file [TUTORIAL.md](TUTORIAL.md) for the tutorial instructions.**
 
 # Build a database-driven Slackbot with IBM Watson™ Assistant
